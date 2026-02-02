@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kami - Murniphoto</title>
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Murniphoto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="product.html">Produk</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="view.html">Virtual View</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="about-us.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <a href="mailto:murniphoto@gmail.com" class="btn-email">Email Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Banner Section -->
+    <section class="product-banner">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1>Katalog Produk Kami</h1>
+                <p>Temukan bingkai foto premium dengan berbagai pilihan ukuran dan desain yang elegan. Dari gaya klasik hingga modern, kami memiliki bingkai yang sempurna untuk setiap momen berharga Anda.</p>
+                <div class="banner-features">
+                    <div class="banner-feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Kualitas Premium</span>
+                    </div>
+                    <div class="banner-feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Desain Beragam</span>
+                    </div>
+                    <div class="banner-feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Harga Terjangkau</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Filter & Grid Section -->
+    <section class="product-section">
+        <div class="container">
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3>Filter Berdasarkan Ukuran</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Semua Produk</button>
+                    <button class="filter-btn" data-filter="5R">5R (5x7 inch)</button>
+                    <button class="filter-btn" data-filter="6R">6R (6x8 inch)</button>
+                    <button class="filter-btn" data-filter="8R">8R (8x10 inch)</button>
+                    <button class="filter-btn" data-filter="10R">10R (10x12 inch)</button>
+                    <button class="filter-btn" data-filter="12R">12R (12x16 inch)</button>
+                    <button class="filter-btn" data-filter="16R">16R (16x20 inch)</button>
+                    <button class="filter-btn" data-filter="26R">26R (16x20 inch)</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+
+                <!-- Product 1 -->
+                <div class="product-item" data-category="5R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-1.jpg" alt="Bingkai Kayu Klasik 5R">
+                            <span class="product-badge best-seller">Best Seller</span>
+                            <span class="product-size-badge">5R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Kayu Klasik</h4>
+                            <p class="product-size">Ukuran: 5R (5x7 inch)</p>
+                            <p class="product-desc">Bingkai kayu jati dengan finishing natural yang elegan dan kokoh</p>
+                            <div class="product-price">Rp 150.000</div>
+                            <a href="product-detail.html?id=1" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item" data-category="6R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-2.jpg" alt="Bingkai Modern 6R">
+                            <span class="product-badge new">New</span>
+                            <span class="product-size-badge">6R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Modern Minimalis</h4>
+                            <p class="product-size">Ukuran: 6R (6x8 inch)</p>
+                            <p class="product-desc">Desain minimalis dengan material aluminum premium yang tahan lama</p>
+                            <div class="product-price">Rp 200.000</div>
+                            <a href="product-detail.html?id=2" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item" data-category="8R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-3.jpg" alt="Bingkai Vintage 8R">
+                            <span class="product-size-badge">8R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Vintage Antik</h4>
+                            <p class="product-size">Ukuran: 8R (8x10 inch)</p>
+                            <p class="product-desc">Bingkai bergaya vintage dengan ukiran detail klasik yang menawan</p>
+                            <div class="product-price">Rp 180.000</div>
+                            <a href="product-detail.html?id=3" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item" data-category="10R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-4.jpg" alt="Bingkai Mewah 10R">
+                            <span class="product-badge premium">Premium</span>
+                            <span class="product-size-badge">10R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Mewah Gold</h4>
+                            <p class="product-size">Ukuran: 10R (10x12 inch)</p>
+                            <p class="product-desc">Bingkai mewah dengan finishing gold untuk tampilan eksklusif</p>
+                            <div class="product-price">Rp 250.000</div>
+                            <a href="product-detail.html?id=4" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-item" data-category="12R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-1.jpg" alt="Bingkai Rustic 12R">
+                            <span class="product-size-badge">12R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Rustic Natural</h4>
+                            <p class="product-size">Ukuran: 12R (12x16 inch)</p>
+                            <p class="product-desc">Bingkai kayu dengan sentuhan rustic untuk nuansa natural dan hangat</p>
+                            <div class="product-price">Rp 300.000</div>
+                            <a href="product-detail.html?id=5" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-item" data-category="16R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-2.jpg" alt="Bingkai Premium 16R">
+                            <span class="product-badge premium">Premium</span>
+                            <span class="product-size-badge">16R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Premium Elegant</h4>
+                            <p class="product-size">Ukuran: 16R (16x20 inch)</p>
+                            <p class="product-desc">Bingkai berukuran besar dengan detail mewah untuk ruangan istimewa</p>
+                            <div class="product-price">Rp 450.000</div>
+                            <a href="product-detail.html?id=6" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-item" data-category="16R">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-7.webp" alt="Bingkai Anjing">
+                            <span class="product-badge premium">Premium</span>
+                            <span class="product-size-badge">16R</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Premium Elegant</h4>
+                            <p class="product-size">Ukuran: 16R (16x20 inch)</p>
+                            <p class="product-desc">Bingkai berukuran besar dengan detail mewah untuk ruangan istimewa</p>
+                            <div class="product-price">Rp 450.000</div>
+                            <a href="product-detail.html?id=7" class="btn-detail-product">
+                                <i class="bi bi-eye me-2"></i>Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" style="display: none;">
+                <i class="bi bi-search"></i>
+                <h4>Tidak ada produk ditemukan</h4>
+                <p>Coba filter lain atau lihat semua produk</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Butuh Bantuan Memilih Bingkai yang Tepat?</h2>
+                    <p>Tim kami siap membantu Anda menemukan bingkai foto yang sempurna untuk kebutuhan Anda.</p>
+                    <a href="https://wa.me/6281331650105" class="btn-whatsapp-cta" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Hubungi Kami di WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-brand">Murniphoto</h3>
+                    <p class="footer-desc">Bingkai foto premium untuk setiap kenangan berharga Anda. Kualitas terbaik, desain elegan, dan layanan memuaskan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/murni.gatsu/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/murni.gatsubarat"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/6281331650105"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="history.html">Sejarah</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="about-us.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/6281331650105">Custom Frame</a></li>
+                        <li><a href="product.html">Katalog Produk</a></li>
+                        <li><a href="index.html#how-to-order-section">Cara Pemesanan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Jam Operasional</h5>
+                    <ul class="footer-links">
+                        <li>Senin - Sabtu: 09:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 12:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; <span id="year"></span> Murniphoto. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>

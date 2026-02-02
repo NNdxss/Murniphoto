@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Murniphoto</title>
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Murniphoto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link active" href="product.html">Produk</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="view.html">Virtual Tour</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="about-us.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <a href="mailto:murniphoto@gmail.com" class="btn-email">Email Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="product.html">Produk</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="product-name-breadcrumb">Detail Produk</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="row">
+                <!-- Product Gallery -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="product-gallery">
+                        <!-- Main Image -->
+                        <div class="main-image-container">
+                            <img src="assets/image/product/product-dummy-1.jpg" alt="Product Image" id="mainImage" class="main-product-image">
+                            <span class="badge-detail best-seller" id="productBadge">Best Seller</span>
+                        </div>
+                        
+                        <!-- Thumbnail Images -->
+                        <div class="thumbnail-container">
+                            <div class="thumbnail active" data-image="assets/image/product/product-dummy-1.jpg">
+                                <img src="assets/image/product/product-dummy-1.jpg" alt="Thumbnail 1">
+                            </div>
+                            <div class="thumbnail" data-image="assets/image/product/product-dummy-1.jpg">
+                                <img src="assets/image/product/product-dummy-1.jpg" alt="Thumbnail 2">
+                            </div>
+                            <div class="thumbnail" data-image="assets/image/product/product-dummy-1.jpg">
+                                <img src="assets/image/product/product-dummy-1.jpg" alt="Thumbnail 3">
+                            </div>
+                            <div class="thumbnail" data-image="assets/image/product/product-dummy-1.jpg">
+                                <img src="assets/image/product/product-dummy-1.jpg" alt="Thumbnail 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-detail-info">
+                        <h1 class="product-title" id="productTitle">Bingkai Kayu Klasik</h1>
+                        
+                        <div class="product-sell">
+                            <span class="sell-text">36 Terjual</span>
+                        </div>
+
+                        <div class="product-price-detail">
+                            <span class="price" id="productPrice">Rp 150.000</span>
+                            <span class="stock-status in-stock">
+                                <i class="bi bi-check-circle-fill"></i> Stok Tersedia
+                            </span>
+                        </div>
+
+                        <div class="product-specs">
+                            <h5>Spesifikasi Produk</h5>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-rulers"></i>
+                                    <strong>Ukuran:</strong>
+                                    <span id="productSize">5R (5x7 inch)</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-box-seam"></i>
+                                    <strong>Material:</strong>
+                                    <span id="productMaterial">Kayu Jati Premium</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-palette"></i>
+                                    <strong>Warna:</strong>
+                                    <span id="productColor">Natural Wood</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-shield-check"></i>
+                                    <strong>Garansi:</strong>
+                                    <span>1 Tahun</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="product-description">
+                            <h5>Deskripsi Produk</h5>
+                            <p id="productDescription">
+                                Bingkai foto kayu klasik dengan finishing natural yang elegan dan kokoh. Terbuat dari kayu jati berkualitas premium yang telah melalui proses pengeringan sempurna. Cocok untuk memajang foto keluarga, pernikahan, atau momen berharga lainnya. Desain klasik yang timeless membuat bingkai ini cocok untuk berbagai gaya interior, dari tradisional hingga modern kontemporer.
+                            </p>
+                        </div>
+
+                        <div class="product-features">
+                            <h5>Keunggulan Produk</h5>
+                            <ul class="features-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Material kayu jati premium berkualitas tinggi</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Finishing natural yang tahan lama</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Desain klasik dan elegan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Dilengkapi kaca bening berkualitas</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Dudukan belakang yang kokoh</li>
+                            </ul>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <a href="https://wa.me/6281331650105" 
+                               class="btn-order-whatsapp" 
+                               id="btnOrderWhatsapp" 
+                               target="_blank">
+                                <i class="bi bi-whatsapp me-2"></i>Pesan Sekarang
+                            </a>
+                            <a href="product.html" class="btn-back-to-products">
+                                <i class="bi bi-arrow-left me-2"></i>Kembali ke Produk
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk Terkait</h2>
+                <p>Produk lain yang mungkin Anda sukai</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-2.jpg" alt="Bingkai Modern">
+                            <span class="product-badge new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Modern Minimalis</h4>
+                            <div class="product-price">Rp 200.000</div>
+                            <a href="product-detail.html?id=2" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-3.jpg" alt="Bingkai Vintage">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Vintage Antik</h4>
+                            <div class="product-price">Rp 180.000</div>
+                            <a href="product-detail.html?id=3" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-4.jpg" alt="Bingkai Mewah">
+                            <span class="product-badge premium">Premium</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Mewah Gold</h4>
+                            <div class="product-price">Rp 250.000</div>
+                            <a href="product-detail.html?id=4" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-1.jpg" alt="Bingkai Rustic">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Rustic Natural</h4>
+                            <div class="product-price">Rp 300.000</div>
+                            <a href="product-detail.html?id=5" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-7.webp" alt="Bingkai Anjing">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai ANJING</h4>
+                            <div class="product-price">Rp 550.000</div>
+                            <a href="product-detail.html?id=7" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-brand">Murniphoto</h3>
+                    <p class="footer-desc">Bingkai foto premium untuk setiap kenangan berharga Anda. Kualitas terbaik, desain elegan, dan layanan memuaskan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/murni.gatsu/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/murni.gatsubarat"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/6281331650105"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="history.html">Sejarah</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="about-us.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/6281331650105">Custom Frame</a></li>
+                        <li><a href="product.html">Katalog Produk</a></li>
+                        <li><a href="index.html#how-to-order-section">Cara Pemesanan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Jam Operasional</h5>
+                    <ul class="footer-links">
+                        <li>Senin - Sabtu: 09:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 12:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; <span id="year"></span> Murniphoto. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+</body>
+</html>

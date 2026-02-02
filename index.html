@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murniphoto - Bingkai Foto Berkualitas</title>
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Murniphoto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="product.html">Produk</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="view.html">Virtual View</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="about-us.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <a href="mailto:mumrniphoto@gmail.com" class="btn-email">Email Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/image/banner-home-section/background-1.png');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/image/banner-home-section/background-2.jpg');"></div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/image/banner-home-section/background-3.jpg');"></div>
+        </div>
+        
+        <button class="slider-nav prev" aria-label="Previous slide">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="slider-nav next" aria-label="Next slide">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+        
+        <div class="home-content">
+            <h1>Abadikan Momen Berharga dalam Bingkai Berkualitas</h1>
+            <h2>Bingkai Foto Premium untuk Setiap Kenangan</h2>
+            <p>Koleksi bingkai foto berkualitas tinggi dengan berbagai desain elegan. Dari kayu klasik hingga modern minimalis, temukan bingkai yang sempurna untuk setiap momen spesial Anda.</p>
+            <a href="product.html" class="btn-primary">LIHAT PRODUK KAMI <i class="bi bi-arrow-right ms-2"></i></a>
+            <div class="slider-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section class="about-company-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="company-image-wrapper">
+                        <div class="image-outline"></div>
+                        <img src="assets/image/banner-home-section/background-1.png" alt="Murniphoto" class="company-image">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="company-content">
+                        <h2>Tentang Murniphoto</h2>
+                        <p>MurniPhoto didirikan pada tahun 2018 di Denpasar, Bali, oleh Bapak Hariyono yang memiliki minat besar terhadap seni dan fotografi. Dengan visi menyediakan bingkai foto berkualitas untuk membantu masyarakat memajang momen berharga, MurniPhoto menawarkan berbagai ukuran bingkai dari 5R hingga 16R dengan desain sederhana dan elegan. Berkat dukungan masyarakat, terutama para pecinta fotografi, MurniPhoto kini dikenal luas sebagai toko bingkai terpercaya di Bali yang berkomitmen membantu pelanggan menghargai dan merayakan kenangan istimewa mereka.</p>
+                        
+                        <div class="row stats-row mt-4">
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-box-seam stat-icon-small"></i>
+                                    <span class="stat-number-small counter" data-target="523">0</span>
+                                    <div class="stat-label-small">Produk Terjual</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill stat-icon-small"></i>
+                                    <span class="stat-number-small counter" data-target="9">0</span>
+                                    <div class="stat-label-small">Ulasan</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="stat-item">
+                                    <i class="bi bi-award stat-icon-small"></i>
+                                    <span class="stat-number-small counter" data-target="7">0</span>
+                                    <div class="stat-label-small">Tahun Pengalaman</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Murniphoto?</h2>
+                <p>Kami berkomitmen memberikan yang terbaik untuk setiap kenangan berharga Anda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-gem"></i></div>
+                        <h3>Kualitas Premium</h3>
+                        <p>Bahan berkualitas tinggi yang tahan lama dan elegan untuk melindungi foto berharga Anda</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-palette"></i></div>
+                        <h3>Desain Beragam</h3>
+                        <p>Koleksi desain variatif dari klasik hingga modern sesuai selera dan kebutuhan Anda</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-tools"></i></div>
+                        <h3>Desain Custom</h3>
+                        <p>Layanan kustomisasi bingkai sesuai keinginan untuk momen spesial yang unik</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-truck"></i></div>
+                        <h3>Pengiriman Aman</h3>
+                        <p>Pengiriman cepat dengan kemasan khusus yang aman hingga ke tangan Anda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section class="how-to-order-section" id="how-to-order-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cara Pemesanan</h2>
+                <p>Proses pemesanan yang mudah dan cepat untuk kepuasan Anda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="order-step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h3>Pilih Produk</h3>
+                        <p>Telusuri katalog produk kami dan pilih bingkai foto yang sesuai dengan kebutuhan Anda. Tersedia berbagai ukuran, desain, dan material berkualitas.</p>
+                        <div class="step-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Ingin desain custom? Langsung diskusikan kebutuhan anda melalui WhatsApp kami!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="order-step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h3>Hubungi Kami</h3>
+                        <p>Setelah memilih produk, hubungi kami melalui WhatsApp untuk konfirmasi pesanan. Tim kami siap membantu menjawab pertanyaan dan memberikan saran terbaik.</p>
+                        <a href="https://wa.me/6281331650105" class="btn-whatsapp" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="order-step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h3>Pengiriman/Ambil</h3>
+                        <p>Pilih metode yang paling nyaman untuk Anda - pengiriman ke alamat dengan packaging aman, atau ambil langsung di toko kami untuk lebih cepat dan hemat.</p>
+                        <div class="step-note">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Semua pesanan dikemas dengan aman untuk memastikan produk sampai dalam kondisi sempurna!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk Unggulan Kami</h2>
+                <p>Koleksi bingkai foto terbaik dan terpopuler pilihan pelanggan</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-1.jpg" alt="Bingkai Kayu Klasik">
+                            <span class="product-badge">Best Seller</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Kayu Klasik</h4>
+                            <p>Bingkai kayu jati dengan finishing natural yang elegan</p>
+                            <div class="product-price">Rp 150.000</div>
+                            <a href="product-detail.html?id=1" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-2.jpg" alt="Bingkai Modern">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Modern Minimalis</h4>
+                            <p>Desain minimalis dengan material aluminum premium</p>
+                            <div class="product-price">Rp 200.000</div>
+                            <a href="product-detail.html?id=2" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-3.jpg" alt="Bingkai Vintage">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Vintage Antik</h4>
+                            <p>Bingkai bergaya vintage dengan ukiran detail klasik</p>
+                            <div class="product-price">Rp 180.000</div>
+                            <a href="product-detail.html?id=3" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image/product/product-dummy-4.jpg" alt="Bingkai Mewah">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-info">
+                            <h4>Bingkai Mewah Gold</h4>
+                            <p>Bingkai mewah dengan finishing gold untuk tampilan elegan</p>
+                            <div class="product-price">Rp 250.000</div>
+                            <a href="product-detail.html?id=4" class="btn-detail">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="product.html" class="btn-primary">LIHAT SEMUA PRODUK <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Pelanggan Kami</h2>
+                <p>Kepuasan pelanggan adalah prioritas utama kami</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="testimonial-text">
+                            "Kualitas bingkainya luar biasa! Sangat kokoh dan elegan. Foto pernikahan saya jadi terlihat lebih istimewa. Pelayanan juga ramah dan pengiriman cepat."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">SA</div>
+                            <div class="author-info">
+                                <h5>Gede Ananta</h5>
+                                <p>Gianyar</p>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="testimonial-text">
+                            "Sudah langganan di Murniphoto sejak 2 tahun lalu. Produknya selalu konsisten bagus dan harga terjangkau. Desainnya juga banyak pilihan, cocok untuk berbagai tema."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">BP</div>
+                            <div class="author-info">
+                                <h5>Budi Prasetyo</h5>
+                                <p>Denpasar</p>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="testimonial-text">
+                            "Puas banget! Custom bingkai untuk kado ulang tahun orang tua, hasilnya melebihi ekspektasi. Kualitas premium dengan harga yang worth it. Highly recommended!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">DL</div>
+                            <div class="author-info">
+                                <h5>Dewi Lestari</h5>
+                                <p>Tabanan</p>
+                                <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="testimonials.html" class="btn-primary">
+                    LIHAT SEMUA ULASAN <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="news-section" id="news-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Berita & Update Terbaru</h2>
+                <p>Informasi terkini seputar produk dan promo spesial dari kami</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="assets/image/blog/discount-30.png" alt="Promo Spesial">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">20 Oktober 2025</span>
+                            <h4>Promo Akhir Tahun Diskon 30%</h4>
+                            <p>Dapatkan diskon hingga 30% untuk semua produk bingkai foto dalam rangka menyambut akhir tahun. Promo terbatas!</p>
+                            <a href="blog-promo-akhir-tahun.html" class="btn-read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="assets/image/product/product-dummy-3.jpg" alt="Tips Merawat">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">10 Oktober 2025</span>
+                            <h4>Tips Merawat Bingkai Foto</h4>
+                            <p>Panduan lengkap merawat bingkai foto agar tetap awet dan terlihat seperti baru dalam jangka waktu lama.</p>
+                            <a href="blog-tips-merawat-bingkai.html" class="btn-read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="news.html" class="btn-primary">
+                    LIHAT SEMUA BERITA <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Copyright -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-brand">Murniphoto</h3>
+                    <p class="footer-desc">Bingkai foto premium untuk setiap kenangan berharga anda. Kualitas terbaik, desain elegan, dan layanan memuaskan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/murni.gatsu/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/murni.gatsubarat"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/6281331650105"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="history.html">Sejarah</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="about-us.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/6281331650105">Custom Frame</a></li>
+                        <li><a href="product.html">Katalog Produk</a></li>
+                        <li><a href="#how-to-order-section">Cara Pemesanan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Jam Operasional</h5>
+                    <ul class="footer-links">
+                        <li>Senin - Sabtu: 09:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 12:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; <span id="year"></span> Murniphoto. All Rights Reserved. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

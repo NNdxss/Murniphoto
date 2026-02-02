@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sejarah Murniphoto</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/view.css">
+
+  <style>
+    /* Pastikan viewer tampil penuh */
+    #container360 {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      z-index: 1;
+    }
+
+    .view-banner {
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Murniphoto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <span></span>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item me-2">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link" href="product.html">Produk</a>
+          </li>
+          <li class="nav-item me-2">
+              <a class="nav-link" href="view.html">Virtual View</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link" href="about-us.html">Tentang Kami</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link" href="contact.html">Kontak</a>
+          </li>
+        </ul>
+
+        <a href="mailto:murniphoto@gmail.com" class="btn-email">Email Kami</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- View Banner Section -->
+  <section class="view-banner">
+    <div class="banner-overlay"></div>
+    <div class="container">
+      <div class="banner-content">
+        <h1>Virtual View</h1>
+        <p>
+          MurniPhoto 360 hadir berkat dedikasi Bapak Hariyono, terinspirasi dari visi sederhana
+          untuk membawa pengalaman menjelajahi toko secara virtual melalui tur 360 interaktif yang memukau.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Tour Section -->
+  <div id="container360"></div>
+
+  <!-- Library 3D -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.11.0/build/panolens.min.js"></script>
+
+  <!-- Script Virtual Tour -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById('container360');
+
+      const viewer = new PANOLENS.Viewer({
+        container: container,
+        autoRotate: true,
+        autoRotateSpeed: 0.3,
+        controlBar: true,
+        cameraFov: 75
+      });
+
+      const panorama = new PANOLENS.ImagePanorama('assets/image/tour/tour-1.jpg');
+      
+        // --- TULISAN 1: BINGKAI ---
+          const info1 = new PANOLENS.Infospot(350);
+          info1.position.set(6000, 0, -500);
+          info1.addHoverText("BINGKAI", 30);
+          panorama.add(info1);
+
+        // --- TULISAN 2: ETALASE ---
+          const info2 = new PANOLENS.Infospot(350);
+          info2.position.set(-1000, 0, -800); 
+          info2.addHoverText("ETALASE", 30);
+          panorama.add(info2);
+
+        // --- TULISAN 3: PARKIR ---
+        const info3 = new PANOLENS.Infospot(350);
+        info3.position.set(0, 500, 2000);
+        info3.addHoverText("PARKIR", 30);
+        panorama.add(info3);
+
+
+      viewer.add(panorama);
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                  <h3 class="footer-brand">Murniphoto</h3>
+                  <p class="footer-desc">Bingkai foto premium untuk setiap kenangan berharga Anda. Kualitas terbaik, desain elegan, dan layanan memuaskan.</p>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/murni.gatsu/"><i class="bi bi-facebook"></i></a>
+                      <a href="https://www.instagram.com/murni.gatsubarat"><i class="bi bi-instagram"></i></a>
+                      <a href="https://wa.me/6281331650105"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                  <h5>Menu</h5>
+                  <ul class="footer-links">
+                      <li><a href="index.html">Beranda</a></li>
+                      <li><a href="history.html">Sejarah</a></li>
+                      <li><a href="product.html">Produk</a></li>
+                      <li><a href="view.html">Virtual Tour</a></li>
+                      <li><a href="about-us.html">Tentang Kami</a></li>
+                      <li><a href="contact.html">Kontak</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                  <h5>Layanan</h5>
+                  <ul class="footer-links">
+                      <li><a href="https://wa.me/6281331650105">Custom Frame</a></li>
+                      <li><a href="product.html">Katalog Produk</a></li>
+                      <li><a href="index.html#how-to-order-section">Cara Pemesanan</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <h5>Jam Operasional</h5>
+                  <ul class="footer-links">
+                      <li>Senin - Sabtu: 09:00 - 17:00</li>
+                      <li>Minggu: 09:00 - 12:00</li>
+                  </ul>
+              </div>
+          </div>
+          <hr class="footer-divider">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <p class="copyright">&copy; <span id="year"></span> Murniphoto. All Rights Reserved.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

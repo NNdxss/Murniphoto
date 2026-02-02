@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Merawat Bingkai Foto - Murniphoto</title>
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Hero Section */
+        .blog-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/image/product/product-dummy-3.jpg') center/cover;
+            opacity: 0.2;
+            animation: kenBurns 20s ease-in-out infinite alternate;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(253, 166, 85, 0.3), rgba(253, 139, 32, 0.3));
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(70px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        /* Content Section */
+        .blog-content {
+            margin-top: -80px;
+            position: relative;
+            z-index: 3;
+            padding-bottom: 80px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: slideUp 0.8s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            gap: 15px;
+            color: var(--secondary-color);
+        }
+
+        .intro-highlight {
+            background: linear-gradient(135deg, rgba(231, 156, 94, 0.1), rgba(255, 188, 101, 0.1));
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            animation: slideInLeft 1s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .intro-highlight h3 {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* Tips Card */
+        .tips-section {
+            margin: 50px 0;
+        }
+
+        .tip-card {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tip-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(253, 166, 85, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .tip-card:hover::before {
+            left: 100%;
+        }
+
+        .tip-card:hover {
+            transform: translateX(10px);
+            border-color: var(--primary-color);
+            box-shadow: -10px 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tip-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(253, 166, 85, 0.2), rgba(253, 139, 32, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .tip-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .tip-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .tip-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .tip-card ul li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #666;
+        }
+
+        .tip-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Do and Don't Section */
+        .do-dont-section {
+            margin: 50px 0;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .do-card, .dont-card {
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .do-card {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+        }
+
+        .dont-card {
+            background: linear-gradient(135deg, #ff7675, #fd79a8);
+            color: white;
+        }
+
+        .do-card::before, .dont-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .do-dont-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .do-dont-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .do-dont-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .do-dont-list {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .do-dont-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .do-dont-list li:last-child {
+            border-bottom: none;
+        }
+
+        .do-card .do-dont-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .dont-card .do-dont-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 5px;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-whatsapp-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #25D366;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-whatsapp-large:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 30px 20px;
+            }
+
+            .tip-card {
+                padding: 25px 20px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+            }
+
+            .cta-section h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Murniphoto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><span></span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-2"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item me-2"><a class="nav-link" href="product.html">Produk</a></li>
+                    <li class="nav-item me-2"><a class="nav-link" href="view.html">Virtual Tour</a></li>
+                    <li class="nav-item me-2"><a class="nav-link" href="about-us.html">Tentang Kami</a></li>
+                    <li class="nav-item me-2"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+                <a href="mailto:murniphoto@gmail.com" class="btn-email">Email Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="banner-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">PANDUAN LENGKAP</div>
+            <h1>Tips Merawat Bingkai Foto</h1>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>10 Oktober 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="bi bi-tag"></i>
+                    <span>Tips & Trik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="content-card">
+                        <a href="index.html#news" class="back-btn">
+                            <i class="bi bi-arrow-left"></i> Kembali ke Berita
+                        </a>
+
+                        <div class="intro-highlight">
+                            <h3>Kenapa Perawatan Bingkai Foto Itu Penting?</h3>
+                            <p class="mb-0">Bingkai foto yang terawat dengan baik tidak hanya terlihat lebih menarik, tetapi juga melindungi foto-foto berharga Anda dari kerusakan. Dengan perawatan yang tepat, bingkai foto dapat bertahan puluhan tahun dan tetap terlihat seperti baru.</p>
+                        </div>
+
+                        <h2 class="mt-5 mb-4">Panduan Lengkap Merawat Bingkai Foto</h2>
+                        <p>Setiap bingkai foto memerlukan perhatian khusus agar tetap awet dan indah. Berikut adalah panduan komprehensif untuk merawat berbagai jenis bingkai foto yang Anda miliki.</p>
+
+                        <!-- Tips Cards -->
+                        <div class="tips-section">
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-droplet"></i>
+                                </div>
+                                <h3>Pembersihan Rutin</h3>
+                                <p>Debu dan kotoran yang menumpuk dapat merusak permukaan bingkai dan membuat foto terlihat kusam. Lakukan pembersihan rutin untuk menjaga keindahan bingkai Anda.</p>
+                                <ul>
+                                    <li>Gunakan kain mikrofiber yang lembut dan kering untuk membersihkan debu</li>
+                                    <li>Bersihkan bingkai minimal 1-2 minggu sekali</li>
+                                    <li>Untuk bingkai kaca, gunakan cairan pembersih kaca khusus</li>
+                                    <li>Hindari penggunaan bahan kimia keras yang dapat merusak finishing</li>
+                                    <li>Lap dengan gerakan memutar yang lembut, jangan menggosok terlalu keras</li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-sun"></i>
+                                </div>
+                                <h3>Hindari Sinar Matahari Langsung</h3>
+                                <p>Paparan sinar matahari langsung adalah musuh terbesar bingkai foto. UV dapat menyebabkan warna memudar dan material rusak.</p>
+                                <ul>
+                                    <li>Tempatkan bingkai foto di area yang tidak terkena sinar matahari langsung</li>
+                                    <li>Gunakan tirai atau gorden untuk melindungi dari sinar UV</li>
+                                    <li>Pertimbangkan untuk menggunakan kaca anti-UV pada bingkai</li>
+                                    <li>Rotasi posisi bingkai setiap beberapa bulan untuk paparan merata</li>
+                                    <li>Hindari meletakkan bingkai di dekat jendela yang terkena matahari sore</li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </div>
+                                <h3>Kontrol Kelembaban dan Suhu</h3>
+                                <p>Kelembaban dan suhu yang ekstrem dapat menyebabkan bingkai melengkung, retak, atau berjamur. Jaga kondisi ruangan tetap optimal.</p>
+                                <ul>
+                                    <li>Pertahankan kelembaban ruangan antara 40-60%</li>
+                                    <li>Hindari menempatkan bingkai di ruangan yang terlalu lembab (seperti kamar mandi)</li>
+                                    <li>Jangan letakkan bingkai di dekat AC atau pemanas langsung</li>
+                                    <li>Gunakan dehumidifier jika tinggal di area dengan kelembaban tinggi</li>
+                                    <li>Pastikan ventilasi ruangan baik untuk sirkulasi udara</li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-hammer"></i>
+                                </div>
+                                <h3>Pemasangan yang Benar</h3>
+                                <p>Cara pemasangan yang salah dapat merusak bingkai dan membahayakan keselamatan. Pastikan bingkai terpasang dengan aman dan stabil.</p>
+                                <ul>
+                                    <li>Gunakan paku atau hook yang sesuai dengan berat bingkai</li>
+                                    <li>Pastikan dinding cukup kuat untuk menopang bingkai</li>
+                                    <li>Gunakan level untuk memastikan bingkai terpasang lurus</li>
+                                    <li>Periksa kekuatan pemasangan secara berkala</li>
+                                    <li>Untuk bingkai besar dan berat, gunakan sistem mounting profesional</li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3>Perlindungan Foto di Dalam Bingkai</h3>
+                                <p>Bingkai yang bagus harus melindungi foto dari kerusakan. Perhatikan kondisi foto di dalam bingkai secara berkala.</p>
+                                <ul>
+                                    <li>Gunakan backing board berkualitas untuk menopang foto</li>
+                                    <li>Pastikan tidak ada celah yang membuat debu masuk</li>
+                                    <li>Gunakan mat board acid-free untuk foto yang berharga</li>
+                                    <li>Periksa kondisi foto setiap 6 bulan sekali</li>
+                                    <li>Ganti foto yang mulai menunjukkan tanda-tanda kerusakan</li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="bi bi-brush"></i>
+                                </div>
+                                <h3>Perawatan Khusus Berdasarkan Material</h3>
+                                <p>Setiap jenis material bingkai memerlukan perawatan yang berbeda. Kenali material bingkai Anda untuk perawatan optimal.</p>
+                                <ul>
+                                    <li><strong>Kayu:</strong> Poles dengan furniture polish secara berkala</li>
+                                    <li><strong>Metal:</strong> Gunakan pembersih metal khusus untuk mencegah karat</li>
+                                    <li><strong>Plastik:</strong> Hindari bahan kimia keras, cukup lap dengan kain lembab</li>
+                                    <li><strong>Kaca:</strong> Bersihkan dengan pembersih kaca tanpa ammonia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Do and Don't Section -->
+                        <div class="do-dont-section">
+                            <h2 class="mb-4">Yang Boleh dan Tidak Boleh Dilakukan</h2>
+                            <div class="comparison-grid">
+                                <div class="do-card">
+                                    <div class="do-dont-header">
+                                        <div class="do-dont-icon">✓</div>
+                                        <h3>LAKUKAN</h3>
+                                    </div>
+                                    <ul class="do-dont-list">
+                                        <li>Bersihkan bingkai secara rutin dengan kain lembut</li>
+                                        <li>Simpan di tempat dengan suhu dan kelembaban stabil</li>
+                                        <li>Gunakan gantungan yang sesuai dengan berat bingkai</li>
+                                        <li>Periksa kondisi bingkai secara berkala</li>
+                                        <li>Rotasi posisi bingkai untuk paparan cahaya merata</li>
+                                        <li>Konsultasi dengan ahli untuk bingkai antik atau mahal</li>
+                                    </ul>
+                                </div>
+
+                                <div class="dont-card">
+                                    <div class="do-dont-header">
+                                        <div class="do-dont-icon">✗</div>
+                                        <h3>JANGAN LAKUKAN</h3>
+                                    </div>
+                                    <ul class="do-dont-list">
+                                        <li>Menyemprotkan cairan pembersih langsung ke bingkai</li>
+                                        <li>Menempatkan bingkai di bawah sinar matahari langsung</li>
+                                        <li>Menggunakan bahan kimia keras untuk membersihkan</li>
+                                        <li>Menggantung bingkai di tempat yang lembab</li>
+                                        <li>Menyentuh permukaan kaca dengan tangan kotor</li>
+                                        <li>Membiarkan debu menumpuk dalam waktu lama</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section">
+                            <h3>Butuh Konsultasi atau Produk Perawatan?</h3>
+                            <p class="mb-4">Tim Murniphoto siap membantu Anda dengan tips perawatan khusus untuk bingkai foto Anda. Kami juga menyediakan produk pembersih berkualitas!</p>
+                            <a href="https://wa.me/6281331650105?text=Halo%20Murniphoto,%20saya%20ingin%20konsultasi%20tentang%20perawatan%20bingkai%20foto" class="btn-whatsapp-large" target="_blank">
+                                <i class="bi bi-whatsapp" style="font-size: 24px;"></i>
+                                Konsultasi via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Copyright -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-brand">Murniphoto</h3>
+                    <p class="footer-desc">Bingkai foto premium untuk setiap kenangan berharga Anda. Kualitas terbaik, desain elegan, dan layanan memuaskan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/murni.gatsu/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/murni.gatsubarat"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/6281331650105"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="history.html">Sejarah</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="about-us.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h5>Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/6281331650105">Custom Frame</a></li>
+                        <li><a href="product.html">Katalog Produk</a></li>
+                        <li><a href="index.html#how-to-order-section">Cara Pemesanan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Jam Operasional</h5>
+                    <ul class="footer-links">
+                        <li>Senin - Sabtu: 09:00 - 17:00</li>
+                        <li>Minggu: 09:00 - 12:00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; <span id="year"></span> Murniphoto. All Rights Reserved. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
